@@ -16,7 +16,7 @@ formPalindrome (y,x) = let stringForm = show x
 solution :: Int -> Int
 solution x = let list_ = iterate (fmap (1+)) (splitNum x) 
                  aa = map formPalindrome list_
-             in (head . (dropWhile (\y -> y <= x))) $ aa
+             in head . dropWhile (<= x) $ aa
 
 
 
