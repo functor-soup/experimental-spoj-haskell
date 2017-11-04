@@ -7,7 +7,6 @@ splitNum x = let stringForm = show x
 formPalindrome :: (Int,Int) -> Int
 formPalindrome (0,x) = x+1 
 formPalindrome (y,x) = let stringForm = show x 
-                           l = length stringForm 
                            part = take y stringForm 
                            lasti = drop y stringForm
                            in read (part ++ lasti ++ (reverse part))
